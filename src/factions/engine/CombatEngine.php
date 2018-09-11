@@ -41,8 +41,8 @@ class CombatEngine extends Engine
         if($event->getPlayer()->getLastDamageCause() instanceof EntityDamageByEntityEvent) {
             $attacker = $event->getPlayer()->getLastDamageCause()->getDamager();
             if($attacker instanceof Player) {
-                $fplayer = Member::get($event->getPlayer());
-                $fattacker = Member::get($attacker);
+                $fplayer = Members::get($event->getPlayer());
+                $fattacker = Members::get($attacker);
 
                 // Inform friendly fire
                 if($ff = (Relation::sameFaction($fattacker, $fplayer) || Relation::isAlly($fattacker, $fplayer))) {
