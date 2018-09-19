@@ -65,7 +65,7 @@ class Top extends Command {
 		}
 		$page = $this->getArgument(0);
 
-		$pager = new Pager("top-header", $page, $height, $book, $sender, function (array $d, int $i, CommandSender $sender) use ($height, $page, $sortBy) {
+		$pager = new Pager("top-header", $title, $page, $height, $book, $sender, function (array $d, int $i, CommandSender $sender) use ($height, $page, $sortBy) {
 			$value = $sortBy === "power" ? $d[1] : Text::time_elapsed($d[1], true);
 			return Localizer::trans('top-line', [($page - 1) * $height + $i + 1, $d[0], $value]);
 		});
