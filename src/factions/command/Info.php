@@ -38,7 +38,7 @@ class Info extends Command
     public function setup()
     {
         // Parameters
-        $this->addParameter((new FactionParameter("faction"))->setDefaultValue("self"));
+        $this->addParameter((new FactionParameter("faction"))->setDefaultValue("self")->setPermission(Permissions::INFO));
     }
 
     public function perform(CommandSender $sender, $label, array $args)
