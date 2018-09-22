@@ -54,6 +54,7 @@ permissions:
       factions.flag.show: {description: show flags, default: true}
       factions.home: {description: teleport to faction home, default: true}
       factions.hud: {description: toggle hud, default: true}
+      factions.info: {description: Shows faction information, default: true}
       factions.invite: {description: manage invites, default: true}
       factions.invite.list: {description: list invited players, default: true}
       factions.invite.list.other: {description: list invited players of another factions, default: op}
